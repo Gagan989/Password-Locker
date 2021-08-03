@@ -52,3 +52,8 @@ class User:
     @classmethod
     def display_userInfo(cls):
         return cls.user_list
+
+class Account:
+
+    account_list = []
+    
