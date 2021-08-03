@@ -62,3 +62,11 @@ class Account:
         self.account_name = account_name
         self.account_userName = account_userName
         self.account_password = account_password
+
+    def save_account(self):
+        '''
+        method to save accounts by appending account list
+        '''
+        Account.account_list.append(self)
+
+        
