@@ -1,5 +1,5 @@
 import unittest # Importing the unittest module
-from user import User # Importing the contact class
+from user import Account, User # Importing the contact class
 
 class TestUser(unittest.TestCase):
 
@@ -80,3 +80,10 @@ class TestUser(unittest.TestCase):
         '''
 
         self.assertEqual(User.display_userInfo(),User.user_list)
+
+class TestAccount(unittest.TestCase):
+    def setUp(self):
+        '''
+        Set up method to run before each test cases.
+        '''
+        self.new_account = Account("Twitter", "gsgagan", "password1234")
