@@ -2,6 +2,8 @@
 from user import User
 from user import Account
 
+#functions for User class
+
 def create_user(firstname,lastname,username,password):
     '''
     function to create new user
@@ -38,3 +40,36 @@ def display_user():
     function to display users
     '''
     return User.display_userInfo()
+
+# functions for Account class
+
+def create_account(accountname,accountusername,accountpassword):
+    '''
+    function to create account
+    '''
+    new_account = Account(accountname,accountusername,accountpassword)
+    return new_account
+
+def save_account(user):
+    '''
+    function to save account
+    '''
+    user.save_account()
+
+def delete_account(user):
+    '''
+    function to delete account
+    '''
+    user.delete_account() 
+
+def display_account_credentials():
+    '''
+    function to display account details
+    '''
+    return Account.display_accounts()
+
+def find_account_credentials(accountname):
+    '''
+    function to search for accounts by name
+    '''
+    return Account.find_by_accountName(accountname)
