@@ -26,3 +26,9 @@ def find_user(username):
     function to search for users by username
     '''
     return User.find_by_username(username)
+
+def find_password(userpassword):
+    '''
+    function to search for users by passwords
+    '''
+    return User.find_by_userpassword(userpassword)
