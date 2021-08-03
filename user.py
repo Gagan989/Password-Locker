@@ -48,3 +48,7 @@ class User:
         for user in cls.user_list:
             if user.user_name == username:
                 return user
+
+    @classmethod
+    def display_userInfo(cls):
+        return cls.user_list
