@@ -39,6 +39,7 @@ class User:
     def find_by_username(cls,username):
         '''
         Method that takes in a username and returns a user that matches that username.
+
         Args:
             username: Username to search for
         Returns :
@@ -50,7 +51,20 @@ class User:
                 return user
 
     @classmethod
+    def find_by_userpassword(cls,userpassword):
+        '''
+        function that searches for usernames
+        '''
+        
+        for password in cls.user_list:
+            if password.password == userpassword:
+                return password
+
+    @classmethod
     def display_userInfo(cls):
+        '''
+        function that displays users info
+        '''
         return cls.user_list
 
 class Account:
