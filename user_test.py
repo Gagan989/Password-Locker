@@ -96,4 +96,11 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(self.new_account.account_name,"Twitter")
         self.assertEqual(self.new_account.account_userName,"gsgagan")
         self.assertEqual(self.new_account.account_password,"password1234")
+
+    def test_save_account(self):
+        '''
+        test_save_account test case to test if the account object is saved into the account list
+        '''
+        self.new_account.save_account() #saving the new account
+        self.assertEqual(len(Account.account_list),1)
         
