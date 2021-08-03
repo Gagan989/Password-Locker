@@ -103,4 +103,9 @@ class TestAccount(unittest.TestCase):
         '''
         self.new_account.save_account() #saving the new account
         self.assertEqual(len(Account.account_list),1)
-        
+
+    def tearDown(self):
+        '''
+        tear down method to help with delete account method
+        '''
+        Account.account_list = []
