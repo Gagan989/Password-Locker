@@ -73,3 +73,11 @@ def find_account_credentials(accountname):
     function to search for accounts by name
     '''
     return Account.find_by_accountName(accountname)
+
+def main():
+
+
+
+
+if __name__ == '__main__':
+    main()
