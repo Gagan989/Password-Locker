@@ -84,6 +84,27 @@ def main():
         print("Use these short-codes for: su - SignUp  or  lg - Login")
         user_choice = input().lower()
 
+        if user_choice == "su":
+            print("Create an account")
+            print("-"*10)
+            print("Enter your First Name:")
+
+            firstname = input()
+
+            print("Enter Last Name:")
+            lastname = input()
+
+            print("Enter Username:")
+            username = input()
+
+            print("Enter password")
+            password = input()
+
+            save_user(create_user(firstname,lastname,username,password)) #create and save new username
+            print('\n')
+            print(f"New user {firstname} {lastname} has been created.You can now proceed to login with your credentials.")
+            print('\n')
+
 
 
 
