@@ -121,6 +121,21 @@ def main():
 
                 account_choice = input().lower()
 
+                if account_choice == "nw":
+                    print("Enter Account Name:")
+                    accountname = input()
+
+                    print("Enter Account Username:")
+                    accountusername = input()
+
+                    print("Enter Account Password:") 
+                    accountpassword = input()
+
+                    save_account(create_account(accountname,accountusername,accountpassword)) #create and save new Account
+                    print(f"Account Name:{accountname}, Account Username:{accountusername}, Account Password:{accountpassword}")
+
+                    
+
 
 
 
