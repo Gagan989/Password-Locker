@@ -111,7 +111,16 @@ def main():
 
             print("Enter your password:")
             login_password = input()
-            
+
+            if find_user(login_userName) and find_password(login_password):
+                print('\n')
+                print("Welcome! To continue please select an option:")
+                print("-"*60)
+
+                print("nw - Add New Account, da - Display Accounts, vw -View Account Details, dlt - Delete Account Detaiils")
+
+                account_choice = input().lower()
+
 
 
 
