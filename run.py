@@ -80,6 +80,10 @@ def main():
     print(f"Hello {name}! To start off please choose one of the options below:")
     print('\n')
 
+    while True:
+        print("Use these short-codes for: su - SignUp  or  lg - Login")
+        user_choice = input().lower()
+
 
 
 
