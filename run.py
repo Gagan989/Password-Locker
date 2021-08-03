@@ -32,3 +32,9 @@ def find_password(userpassword):
     function to search for users by passwords
     '''
     return User.find_by_userpassword(userpassword)
+
+def display_user():
+    '''
+    function to display users
+    '''
+    return User.display_userInfo()
