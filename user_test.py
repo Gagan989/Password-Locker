@@ -109,3 +109,11 @@ class TestAccount(unittest.TestCase):
         tear down method to help with delete account method
         '''
         Account.account_list = []
+
+    def test_display_account_credentials(self):
+        '''
+        test case to chick if account credentials can be displayed
+        '''
+        self.assertEqual(Account.display_accounts(),Account.account_list)
+
+        
