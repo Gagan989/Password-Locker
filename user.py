@@ -69,4 +69,17 @@ class Account:
         '''
         Account.account_list.append(self)
 
+    @classmethod
+    def display_accounts(cls):
+        '''
+        method that displays user credentials
+        '''
+        return cls.account_list
+
+    def delete_account(self):
+        '''
+        method that delets users accounts from account list
+        '''
+        Account.account_list.remove(self)
+
         
