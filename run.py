@@ -105,6 +105,14 @@ def main():
             print(f"New user {firstname} {lastname} has been created.You can now proceed to login with your credentials.")
             print('\n')
 
+        elif user_choice == "lg":
+            print("Enter your Username:")
+            login_userName = input()
+
+            print("Enter your password:")
+            login_password = input()
+            
+
 
 
 
