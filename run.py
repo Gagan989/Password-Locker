@@ -134,7 +134,51 @@ def main():
                     save_account(create_account(accountname,accountusername,accountpassword)) #create and save new Account
                     print(f"Account Name:{accountname}, Account Username:{accountusername}, Account Password:{accountpassword}")
 
-                    
+                elif account_choice == "da":
+                    if display_account_credentials():
+                        print("Here is a list of all your accounts: ")
+                        print('\n')
+
+                        for account in display_account_credentials():
+                            print(f"Account Name:{account.account_name}")
+
+                    else:
+                        print("invalid choice")
+
+
+                elif account_choice == "vw":
+                    print("Enter an Account Name:")
+                    account_choiceName = input()
+
+                    if display_account_credentials():
+                        account_choiceName = find_account_credentials(account_choiceName)
+                        print(f"Account Username:{account_choiceName.account_userName}   Password:{account_choiceName.account_password}")
+
+                    else:
+                        print(f"{account_choiceName} does not exist")
+
+
+
+                elif account_choice == "dlt":
+                    print("Enter Account Name:")
+                    delete_acc = input()
+
+                    if delete_account(delete_acc):
+                        return delete_account(delete_acc)
+
+                    else:
+                        print(f"{delete_acc} does not exist")
+
+                else:
+                    print("Incorrect username or password.Please try again.")
+                    print('\n')
+
+        else:
+            print("Incorrect Option.Please choose from the ones listed")
+            print('\n')
+
+
+
 
 
 
