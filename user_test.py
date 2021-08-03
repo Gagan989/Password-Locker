@@ -135,3 +135,6 @@ class TestAccount(unittest.TestCase):
         found_account = Account.find_by_accountName("Instagram")
         self.assertEqual(found_account.account_name,"Instagram")
 
+if __name__ == '__main__':
+    unittest.main()
+
