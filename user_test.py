@@ -1,4 +1,5 @@
 import unittest # Importing the unittest module
+from user import User # Importing the User class
 from user import Account, User # Importing the contact class
 
 class TestUser(unittest.TestCase):
@@ -87,3 +88,12 @@ class TestAccount(unittest.TestCase):
         Set up method to run before each test cases.
         '''
         self.new_account = Account("Twitter", "gsgagan", "password1234")
+
+    def test_init(self):
+        '''
+        test_init test case to see if object is initialised properly
+        '''
+        self.assertEqual(self.new_account.account_name,"Twitter")
+        self.assertEqual(self.new_account.account_userName,"gsgagan")
+        self.assertEqual(self.new_account.account_password,"password1234")
+        
