@@ -116,4 +116,16 @@ class TestAccount(unittest.TestCase):
         '''
         self.assertEqual(Account.display_accounts(),Account.account_list)
 
+    def test_delete_account(self):
+        '''
+        test case to confirm whether an account can be deleted
+        '''
+        self.new_account.save_account()
+        test_account = Account("Facebook", "Star Wars", "theforceisstrong")
+        test_account.save_account()
+
+        test_account.delete_account()
+        self.assertEqual(len(Account.account_list),1)
+
         
+
