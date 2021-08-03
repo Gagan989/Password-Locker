@@ -73,3 +73,10 @@ class TestUser(unittest.TestCase):
 
         found_user = User.find_by_username("ironman")
         self.assertEqual(found_user.user_name,"ironman")
+
+    def test_display_user_information(self):
+        '''
+        test to check if we can be able to display users saved in user_list
+        '''
+
+        self.assertEqual(User.display_userInfo(),User.user_list)
